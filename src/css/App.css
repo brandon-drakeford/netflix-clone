@@ -5,3 +5,14 @@
 .App {
   background-color: #111;
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.loader-text {
+  padding-left: 10px;
+}

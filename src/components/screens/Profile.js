@@ -4,6 +4,7 @@ import '../../css/Profile.css';
 import { selectUser } from '../../features/userSlice';
 import { auth } from '../../firebase';
 import NavBar from '../NavBar';
+import Plans from './Plans';
 
 function Profile() {
     const user = useSelector(selectUser);
@@ -21,10 +22,13 @@ function Profile() {
                     alt="User Avatar Logo" />
 
                 <div className='profileScreen__details'>
-                    <h2>{user.email}</h2>
+                    <h2>{user.user?.email}</h2>
                     
                     <div className='profileScreen__plans'>
                         <h3>Plans</h3>
+
+                        <Plans />
+
                         <button 
                             onClick={() => auth.signOut()}
                             className='profileScreen__signOut'>Sign Out</button>
