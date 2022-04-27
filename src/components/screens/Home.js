@@ -4,7 +4,8 @@ import Banner from '../Banner'
 import NavBar from '../NavBar'
 import { movieList } from '../../movies'
 
-export default function Home() {
+export default function Home({ user }) {
+
   return (
       <>
         <NavBar />

@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import db from '../../firebase';
 import { getCustomerSubscription, loadStripeCheckout }  from '../../firebase/collections';
-import '../../css/Plans.css';
 import Loader from '../common/Loader';
 import _ from 'lodash';
+import '../../css/Plans.css';
 
 function Plans() {
     const [products, setProducts] = useState([]);
@@ -15,7 +15,7 @@ function Plans() {
 
     useEffect(() => {
         dispatch(getCustomerSubscription(user.user?.uid));
-    }, [user.user?.uid])
+    }, [user.user?.uid, dispatch])
 
     useEffect(() => {
         db.collection('products')

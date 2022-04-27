@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
-import _ from 'lodash';
 import './css/App.css';
 
 function App() {
@@ -33,8 +32,8 @@ function App() {
         ) : (
           <Router>
             <Routes>
-              <Route exact path="/" element={!_.isEmpty(user.subscription) || user.subscription?.role === null ? (<Navigate replace to="/profile" />) : (<Home />)} />
-              <Route exact path="/profile" element={<Profile />} /> 
+              <Route exact path="/" element={typeof user.subscription?.role === 'undefined' ? (<Navigate replace to="/profile" />) : (<Home />)} />
+              <Route exact path="/profile" element={<Profile user={user} />} /> 
             </Routes>
           </Router>
         )}
