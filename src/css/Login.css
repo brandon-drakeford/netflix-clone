@@ -15,7 +15,7 @@
 
 .login__body {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 0;
     right: 0;
     z-index: 1;
@@ -90,3 +90,13 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+
+
+@keyframes signup {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }

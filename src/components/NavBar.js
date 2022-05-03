@@ -17,7 +17,7 @@ function NavBar() {
         <img 
             onClick={() => navigate("/")}
             className='nav__logo'
-            src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png"
+            src="https://beat-netflix-clone.vercel.app/static/media/logo.5787551b.svg"
             alt="Netflix Logo" />
 
         <img 

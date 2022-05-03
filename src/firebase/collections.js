@@ -1,7 +1,7 @@
 import db from './'
 import { loadStripe } from '@stripe/stripe-js';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { toast } from 'react-toastify';
+import { toastMessages } from '../components/Utilities';
 
 export const getCustomerSubscription = createAsyncThunk('subscription/getSubscription', async (userID) => {
     let userSubscription = {};
@@ -66,15 +66,7 @@ export const loadStripeCheckout = createAsyncThunk('checkout/loadCheckout', asyn
             const { error, sessionId } = snap.data();
             
             if (error) {
-                return toast.error(`An Error occured: ${error.message}`, {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    });
+                return toastMessages('error', `An Error occured: ${error.message}`);
             }
 
             if (sessionId) {
