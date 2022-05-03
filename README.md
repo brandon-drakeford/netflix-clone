@@ -14,8 +14,8 @@ This project is a clone example of Netflix that was built using React, Firebase,
 ## How to get started
 
 * Download the git project and run `npm install` from root project
-* Create an account on The MovieDB [https://www.themoviedb.org/documentation/api]
-* Create your own youtube API key from Google Cloud Platform. Here's a tutorial to [https://blog.hubspot.com/website/how-to-get-youtube-api-key]
+* Create an account on The MovieDB (https://www.themoviedb.org/documentation/api)[here]
+* Create your own youtube API key from Google Cloud Platform. Here's a tutorial to (https://blog.hubspot.com/website/how-to-get-youtube-api-key)[get started]
 * Run project: `npm start`
 
 ## Scope of project
